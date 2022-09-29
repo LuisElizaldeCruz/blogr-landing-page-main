@@ -1,0 +1,152 @@
+:root{
+    /* ### Primary */
+
+--Light-red-CTA-text: #ff525d;
+--Very-light-red-CTA-hover-background: #ff7a85;
+--Very-dark-blue-headings: hsl(208, 49%, 24%);
+
+/* ### Neutral */
+
+--White-text: hsl(0, 0%, 100%);
+--Grayish-blue-footer-text: hsl(240, 2%, 79%);
+--Very-dark-grayish-blue-body-copy: hsl(207, 13%, 34%);
+--Very-dark-black-blue-footer-background: hsl(240, 10%, 16%);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    height: 70vh;
+    background-image: url("../images/bg-pattern-intro-desktop.svg");
+    background-color: var(--Very-light-red-CTA-hover-background);
+    border-radius: 0 0 0 50px;
+    background-position: 10px;
+    background-size: 150%;
+}
+
+.logo{
+    width: 100px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    margin-bottom: 100px;
+    align-items: center;
+    padding: 40px;
+}
+
+.lista {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.lista>li{
+    margin-left: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+    height: 100%;
+    width: 100px;
+    
+}
+
+.lista li ul {
+    list-style: none;
+    text-align: left;
+    padding: 10px 0 10px 25px;
+    font-size: 14px;
+    display: none;
+    /* position: absolute; */
+    position: fixed;
+    color: black;
+    width: 110px;
+    background-color: white;
+}
+
+.lista li:hover ul{
+    display: block;
+    background-color: white;
+}
+
+.lista li ul li:hover {
+    font-weight: bold;
+}
+
+.btns-menu{
+    display: flex
+}
+
+.btn{
+    height: 40px;
+    width: 80px;
+    border-radius: 15px;
+    background-color: transparent;
+    border-style: none;
+    color: white;
+}
+
+.btn-sign{
+    background-color: white;
+    color: var(--Light-red-CTA-text);
+}
+
+.btn:hover{
+    /* border: solid white 1px; */
+    background-color: rgb(245, 146, 146);
+    cursor: pointer;
+    color: white;
+}
+
+.header-mensaje{
+    width: 600px;
+    height: auto;
+    /* border: solid 1px white; */
+    text-align: center;
+    margin: auto;
+}
+
+.header-mensaje>.p1{
+    color: white;
+    font-size: 3rem;
+}
+
+.header-mensaje>.p2{
+    color: white;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.btns-header{
+    margin-top: 30px;
+}
+
+.btn-header{
+    height: 40px;
+    width: 100px;
+    border-radius: 15px;
+    background-color: transparent;
+    border-style: none;
+    cursor: pointer;
+}
+
+.btn-start{
+    background-color: white;
+    color: var(--Light-red-CTA-text);
+    margin-right: 20px;
+}
+
+.btn-learn{
+    border: solid 1px white;
+    color: white;
+}

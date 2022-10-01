@@ -153,7 +153,6 @@
 
 .articulo1 {
     text-align: center;
-    margin-top: 100px;
     margin-bottom: 200px;
     padding-left: 10%;
     /* position: relative; */
@@ -170,6 +169,8 @@
 .titulo {
     font-size: 30px;
     color: var(--Very-dark-blue-headings);
+    text-align: center;
+    margin-top: 100px;
 }
 
 .articulo1-texto {
@@ -271,5 +272,46 @@
 .articulo3-texto p>b {
     font-size: 24px;
     color: var(--Very-dark-blue-headings);
+}
 
+.footer{
+    background-color: var(--Very-dark-black-blue-footer-background);
+    color: var(--White-text);
+    height: 200px;
+    width: 100%;
+    border-radius: 0 50px 0 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo-footer {
+    width: 100px;
+    height: 50px;
+}
+
+.footer-lista{
+    display: flex;
+    list-style: none;
+    width: 70%;
+    justify-content: space-around;
+    gap: 50px;
+}
+
+.footer-lista>li{
+    font-weight: 900;
+}
+
+.footer-lista li>ul{
+    margin-top: 10px;
+}
+
+.footer-lista li>ul li{
+    list-style: none;
+    font-weight: 300;
+}
+
+.footer-lista li ul li:hover {
+    color: red;
+    cursor: pointer;
 }

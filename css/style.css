@@ -40,6 +40,8 @@
     margin-bottom: 100px;
     align-items: center;
     padding: 40px;
+    /* position: relative;
+    z-index: 100; */
 }
 
 .lista {
@@ -53,10 +55,10 @@
 }
 
 .lista>li {
-    margin-left: 20px;
+    margin-left: 70px;
     margin-right: 20px;
     cursor: pointer;
-    height: 100%;
+    max-height: 20px;
     width: 100px;
 
 }
@@ -68,7 +70,8 @@
     font-size: 14px;
     display: none;
     /* position: absolute; */
-    position: fixed;
+    /* position: fixed; */
+
     color: black;
     width: 110px;
     background-color: white;
@@ -111,7 +114,7 @@
 .header-mensaje {
     width: 600px;
     height: auto;
-    border: solid 1px black;
+    /* border: solid 1px black; */
     text-align: center;
     margin: auto;
 }
@@ -320,17 +323,68 @@
 @media screen and (max-width: 768px) {
     .menu {
         flex-direction: column;
+        width: 90%;
+        background-color: white;
+        min-height: 400px;
+        margin: auto;
+        gap: 10px;
+        justify-content: space-between;
+        /* transform: translateX(30px); */
     }
 
     .lista {
         flex-direction: column;
+        color: black;
+        min-height: auto;
+        font-size: 1.5rem;
+        gap: 10px;
+        /* min-height: 150px; */
+
+    }
+
+    .lista>li {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+
+
+    .lista>li:hover {
+        min-height: 150px;
+    }
+
+    .lista li ul {
+        text-align: center;
+        padding: 0 0 0 0;
+        width: 90%;
+    }
+
+    .lista li ul li {
+        font-size: 1.3rem;
+        background-color: var(--Grayish-blue-footer-text)
     }
 
     .btns-menu {
         flex-direction: column;
+        gap: 10px;
     }
 
-    .header-mensaje{
+    .btns-menu .btn {
+        width: 120px;
+    }
+
+    .btn-log {
+        color: black;
+    }
+
+    .btn-sign {
+        background-color: var(--Very-light-red-CTA-hover-background);
+        color: white;
+    }
+
+    .header-mensaje {
         width: auto;
     }
 
@@ -341,7 +395,7 @@
         overflow: hidden;
     }
 
-    .articulo1-texto{
+    .articulo1-texto {
         text-align: justify;
     }
 
@@ -363,15 +417,15 @@
         min-height: 500px;
         padding-right: 10px;
     }
-    
-    
+
+
     .articulo3-img {
         width: 60%;
         transform: translateX(-25%);
         height: 500px;
     }
-    
-    .articulo3-texto{
+
+    .articulo3-texto {
         width: 50%;
     }
 }

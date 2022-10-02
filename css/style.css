@@ -111,7 +111,7 @@
 .header-mensaje {
     width: 600px;
     height: auto;
-    /* border: solid 1px white; */
+    border: solid 1px black;
     text-align: center;
     margin: auto;
 }
@@ -162,6 +162,7 @@
 
 .articulo1-contenedor {
     display: flex;
+    /* flex-direction: column; */
     height: 100%;
     margin-top: 50px;
 }
@@ -232,7 +233,6 @@
     width: 600px;
     text-align: justify;
     font-size: 18px;
-    font-size: 18px;
     color: var(--White-text);
 }
 
@@ -274,7 +274,7 @@
     color: var(--Very-dark-blue-headings);
 }
 
-.footer{
+.footer {
     background-color: var(--Very-dark-black-blue-footer-background);
     color: var(--White-text);
     height: 200px;
@@ -290,7 +290,7 @@
     height: 50px;
 }
 
-.footer-lista{
+.footer-lista {
     display: flex;
     list-style: none;
     width: 70%;
@@ -298,15 +298,15 @@
     gap: 50px;
 }
 
-.footer-lista>li{
+.footer-lista>li {
     font-weight: 900;
 }
 
-.footer-lista li>ul{
+.footer-lista li>ul {
     margin-top: 10px;
 }
 
-.footer-lista li>ul li{
+.footer-lista li>ul li {
     list-style: none;
     font-weight: 300;
 }
@@ -314,4 +314,64 @@
 .footer-lista li ul li:hover {
     color: red;
     cursor: pointer;
+}
+
+
+@media screen and (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+    }
+
+    .lista {
+        flex-direction: column;
+    }
+
+    .btns-menu {
+        flex-direction: column;
+    }
+
+    .header-mensaje{
+        width: auto;
+    }
+
+    .articulo1 {
+        margin: auto 0 100px 0;
+        padding-left: 1rem;
+        min-height: 400px;
+        overflow: hidden;
+    }
+
+    .articulo1-texto{
+        text-align: justify;
+    }
+
+    .articulo1-img {
+        width: 50%;
+        transform: translateX(20%);
+        height: 500px;
+    }
+
+    .articulo2-texto {
+        width: 50%;
+        text-align: justify;
+        padding-right: 1rem;
+    }
+
+    .articulo3 {
+        padding-right: 1rem;
+        margin-bottom: 100px;
+        min-height: 500px;
+        padding-right: 10px;
+    }
+    
+    
+    .articulo3-img {
+        width: 60%;
+        transform: translateX(-25%);
+        height: 500px;
+    }
+    
+    .articulo3-texto{
+        width: 50%;
+    }
 }

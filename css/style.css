@@ -27,21 +27,34 @@
     border-radius: 0 0 0 50px;
     background-position: 10px;
     background-size: 150%;
+    width: 100%;
 }
 
 .logo {
     width: 100px;
+    height: 50px;
+    margin-left: 20px;
 }
+
+.icono-hamburguesa{
+    display: none;
+}
+
+.contenedor-menu{
+    display: flex;
+    margin-bottom: 100px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
 
 .menu {
     display: flex;
     justify-content: space-between;
     height: 70px;
-    margin-bottom: 100px;
     align-items: center;
     padding: 40px;
-    /* position: relative;
-    z-index: 100; */
 }
 
 .lista {
@@ -87,7 +100,8 @@
 }
 
 .btns-menu {
-    display: flex
+    display: flex;
+    margin-left: 300px;
 }
 
 .btn {
@@ -114,7 +128,6 @@
 .header-mensaje {
     width: 600px;
     height: auto;
-    /* border: solid 1px black; */
     text-align: center;
     margin: auto;
 }
@@ -321,15 +334,50 @@
 
 
 @media screen and (max-width: 768px) {
+    .header{
+        min-height: 80vh;
+    }
+    
+    .contenedor-menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .contenedor-imagenes{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .icono-hamburguesa{
+        display: block;
+        margin-right: 30px;
+        height: 30px;
+        width: 30px;
+    }
+    
+    .icono-hamburguesa:hover{
+        cursor: pointer;
+    }
     .menu {
         flex-direction: column;
-        width: 90%;
+        width: 70%;
         background-color: white;
         min-height: 400px;
         margin: auto;
         gap: 10px;
         justify-content: space-between;
-        /* transform: translateX(30px); */
+        transform: translateX(600px);
+        position: absolute;
+        top: 70px;
+         transition: all 0.5s ease-in-out;
+    }
+
+    .menuActive{
+        transform: translateX(0);
+        transition: all 0.5s ease-in-out;
     }
 
     .lista {
@@ -339,7 +387,6 @@
         font-size: 1.5rem;
         gap: 10px;
         /* min-height: 150px; */
-
     }
 
     .lista>li {
@@ -369,6 +416,7 @@
     .btns-menu {
         flex-direction: column;
         gap: 10px;
+        margin-left: 0;
     }
 
     .btns-menu .btn {
